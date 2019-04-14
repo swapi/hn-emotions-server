@@ -1,0 +1,21 @@
+<html lang='en'>
+  <head>
+    <title>Emotions for Hacker News | Verification</title>
+    <link id='stylesheet' rel='stylesheet' href='/light.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  </head>
+  <body>
+    <h1>Emotions for Hacker News</h1>
+
+	{% if error %}
+	<p>
+	  <strong>Error: {{ error }}</strong><br/>
+      Identity cannot be verified. <a href='/user/signup'>Try again</a>.
+    </p>
+	{% else %}
+    <p>
+      Your identity has been verified. You can now vote with emotions. :)
+    </p>
+    {% endif %}
+  </body>
+</html>

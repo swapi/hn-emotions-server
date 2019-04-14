@@ -1,0 +1,54 @@
+<html lang='en'>
+  <head>
+    <title>Emotions for Hacker News</title>
+    <link id='stylesheet' rel='stylesheet' href='/light.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  </head>
+  <body>
+    <h1>Emotions for HN</h1>
+
+	<small>I am not a native English speaker, please ignore syntactical and semantical mistakes.</small>
+    <p>
+      I see a lot of 'HN is no more like old days' or 'HN has a lot of toxicity' comment these days. 
+      Sometimes it is just a difference of opinions (which is understandable) but sometimes it escalates 
+      to hostile behavior and unnecessary personal attacks.
+    </p>
+    <p>
+      So this is just a tini-tiny experiment to see whether people will have an impact if their comment
+      is flagged as having some form of positive or negative emotional effect on others. It can also 
+      be used to avoid certain comments if you are not interested in seeing those comments.
+    </p>
+      
+    <p>
+     <strong>Emotions for HN</strong> is a chrome plugin I wrote over a weekend, which adds a UI control to each comment showing 5 
+     emotions (listed below). Anybody can vote on these emotions and each comment will show how 
+     much emotions it accumulated. Supported emotions:
+     </p>
+     <ul>
+     	<li>Empathetic</li>
+      	<li>Encouraging</li>
+      	<li>Ad Hominem</li>
+      	<li>Flame war</li>
+      	<li>Discouraging</li>
+     </ul>
+     
+     <p>
+     The emotion having the highest vote on certain comment labeled as an emotion of that comment.
+     So e.g. certain comment has a large number of vote for 'Empathetic' then the comment is 
+     labeled as empathetic. You can also enable <code>emotion-highlighting</code> where you can see all the
+     comments which are labeled with given emotion. See below screenshot.
+     </p>
+     <img src="/hn-emotions.png" alt="HN Emotions screenshot"><center>HN emotions (Showing dummy data :) )</center></img>
+     
+     <p>
+     Code for server and plugin is available at:<br/>
+     <strong>Server</strong>: <code>https://github.com/swapi/hn-emotions-server</code><br/>
+     <strong>Chrome plugin:</strong><code>https://github.com/swapi/hn-emotions-chrome</code><br/>
+     </p>
+     
+     <p>If you have any feedback, let me know at: <code>hn-emotions [at] hardcodr.com</code></p>
+     
+     <hr/>
+     Styling powered by <a href="https://kognise.github.io/water.css/">water.css</a>
+  </body>
+</html>

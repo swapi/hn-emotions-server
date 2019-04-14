@@ -1,0 +1,26 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: static/index.html
+  upload: static/index.html
+  secure: always
+
+- url: /hn-emotions.png
+  static_files: static/hn-emotions.png
+  upload: static/hn-emotions.png
+  secure: always
+
+- url: /light.css
+  static_files: static/light.css
+  upload: static/light.css
+  secure: always
+
+- url: /.*
+  script: main.app
+
+libraries:
+- name: jinja2
+  version: latest

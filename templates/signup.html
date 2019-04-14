@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Emotions for Hacker News | Signup</title>
+    <link id='stylesheet' rel='stylesheet' href='/light.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  </head>
+  <body>
+    <h1>Emotions for Hacker News</h1>
+
+    <h3>Signup</h3>
+    <form action='/user/signup' method='post'>
+      <label for='email'>Email</label>
+      <input type='email' name='email' id='email' placeholder='john.doe@gmail.com'>
+      <input type='submit' value='Sign up'>
+    </form>
+    
+    {% if error %}
+    <p> <strong> Error : {{ error }} </strong> </p>
+    {% endif %}
+
+    <p>
+      This email is not stored on server. This is a way to prevent spamming.
+      You can even use disposable email addresses like mailinator.
+    </p>
+  </body>
+</html>
