@@ -69,7 +69,7 @@ class UserHandler(webapp2.RequestHandler):
     @staticmethod
     def send_email(email, token, session):
         confirmation_url = HN_EMOTIONS_BASE_URL + '/user/verify?u=%s&v=%s' % (token, session)
-        sender_address = ('Emotions for HN <{}@appspot.gserviceaccount.com>'.format(app_identity.get_application_id()))
+        sender_address = ('Emotions for HN <hello@{}.appspotmail.com>'.format(app_identity.get_application_id()))
         subject = 'Confirm your registration'
         body = """Thank you for showing interest in Emotions!
 Please confirm your email address by clicking on the link below:
@@ -143,7 +143,7 @@ Please confirm your email address by clicking on the link below:
 
 
 class EmotionHandler(webapp2.RequestHandler):
-    TTL = 30
+    TTL = 120
 
     @staticmethod
     def serialize_emotions(emotion=None):
